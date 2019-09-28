@@ -20,3 +20,13 @@ ip:port
 ip:port
 ```
 ## Sentinel
+生产化改造的Sentinel，DashBoard在仓库的Sentinel—Pro
+### 客户端改造
+查看dubbo-provider与dubbo-consumer模块
+### 模块启动时添加上报信息
+idea直接在VM options中添加
+```
+-Dcsp.sentinel.api.port=8720  //上报信息所用的端口
+-Dcsp.sentinel.dashboard.server=127.0.0.1:8858 //Sentinel控制台地址与端口
+-Dproject.name=dubbo-provider //在控制台显示的名字
+```
